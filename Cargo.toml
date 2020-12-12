@@ -1,0 +1,23 @@
+[package]
+name = "your_new_name"
+version = "0.1.0"
+authors = ["Ian Sly <iansly@protonmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "*"
+sha1 = "*"
+serde = "*"
+serde_derive = "*"
+bincode = "*"
+ctrlc = "*"
+confy = "*"
+time = "*"
+atomic-counter ="1.0.1"
+rayon = "*"
+
+[profile.release]
+debug = true
+

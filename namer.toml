@@ -1,0 +1,42 @@
+inputs = [
+    [5,'main_input_combination',
+        ['input_new.txt', 'names.txt', 'j-baseballnames.txt', 'input_tiny.txt']
+    ],
+
+    [5,'main_input_combination+discord',
+        ['input_new.txt', 'names.txt', 'discord_names.txt', 'j-baseballnames.txt', 'input_tiny.txt']
+    ],
+
+
+    [4, 'discord',
+        ['discord_names.txt'],
+    ],
+
+    [1, 'discord+surnames',
+        ['discord_names.txt', 'lastnames.txt'],
+    ],
+
+    [4, 'main_input_pure',
+        ['input_new.txt']
+    ],
+
+
+    [1, 'first_names', 
+        ['names.txt',]
+    ],
+
+    [5,'unicode_spam',
+        ['input_new.txt', 'input.txt', 'discord_names.txt', 'input_tiny.txt']
+    ],
+
+    [2,'prez_jnames_lovecraft',
+        ['presidents.txt', 'lovecraft.txt', 'j-baseballnames.txt']
+    ],
+]
+n_gram_size = 0
+min_length = 2
+tweet = false
+regen_chance = 1
+count = 5000000
+threads = 4
+print_every = 5000
