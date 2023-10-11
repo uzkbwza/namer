@@ -7,7 +7,6 @@ inputs = [
         ['input_new.txt', 'names.txt', 'discord_names.txt', 'j-baseballnames.txt', 'input_tiny.txt']
     ],
 
-
     [4, 'discord',
         ['discord_names.txt'],
     ],
@@ -20,12 +19,11 @@ inputs = [
         ['input_new.txt']
     ],
 
-
     [1, 'first_names', 
         ['names.txt',]
     ],
 
-    [5,'unicode_spam',
+    [3,'unicode_spam',
         ['input_new.txt', 'input.txt', 'discord_names.txt', 'input_tiny.txt']
     ],
 

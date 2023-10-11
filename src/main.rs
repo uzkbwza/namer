@@ -79,7 +79,7 @@ fn get_models(
 }
 
 fn main() {
-    let cfg: Config = confy::load_path("namer.toml").unwrap();
+    let cfg: Config = confy::load_path("config.toml").unwrap();
     let mut n_gram_sizes = Vec::new();
 
     if cfg.n_gram_size == 0 {

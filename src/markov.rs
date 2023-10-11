@@ -11,6 +11,7 @@ use std::panic::catch_unwind;
 use std::io;
 use std::io::Write;
 use std::sync::Arc;
+use rustrict::{CensorStr, Type};
 
 #[derive(Clone)]
 pub struct Markov {
@@ -91,22 +92,15 @@ impl Markov {
             }
 
             let mut blacklisted = false;
-            let blacklist = vec![
-                "nigger", "niggy", "nigga", "kike", "faggot", "hitler", "spic", "kkk", "1488",
-            ];
+
 
             // let num_words_generated = result
             //    .split(' ')
             //    .collect::<Vec<&str>>()
             //    .len();
-
-            for entry in blacklist {
-                if result
-                    //.to_lowercase()
-                    .contains(&entry)
-                {
-                    blacklisted = true;
-                }
+            if result.is(Type::SEVERE) && result.is(Type::PROFANE)
+            {
+                blacklisted = true;
             }
 
             if result.len() < self.minimum_length

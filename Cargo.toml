@@ -17,6 +17,7 @@ confy = "*"
 time = "*"
 atomic-counter ="1.0.1"
 rayon = "*"
+rustrict = "*"
 
 [profile.release]
 debug = true
