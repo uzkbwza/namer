@@ -78,7 +78,8 @@ fn get_models(
     models
 }
 
-fn main() {
+fn main() -> io::Result<()> {
+    fs::create_dir_all("data")?;
     let cfg: Config = confy::load_path("config.toml").unwrap();
     let mut n_gram_sizes = Vec::new();
 
@@ -189,7 +190,8 @@ fn main() {
     for name in names.iter() {
         writeln!(&mut writer, "{}", name).ok();
     }
-    println!("Done.")
+    println!("Done.");
+    Ok(())
 }
 
 fn open_file(pathname: &str) -> Result<Vec<String>, io::Error> {
