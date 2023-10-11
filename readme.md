@@ -1,1 +1,1 @@
-just some cobbled together nonsense
+just some cobbled together nonsense. configure with config.toml. creates 5 million names by default LOL
